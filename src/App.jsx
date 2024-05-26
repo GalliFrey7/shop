@@ -1,9 +1,13 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Header from "./components/Header";
 import Home from "./pages/Home";
-import Category from "./pages/Home";
-import Product from "./pages/Home";
+import Category from "./pages/Category";
+import Product from "./pages/Product";
 import Footer from "./components/Footer";
+//import images
+import bannermens from "./assets/bannermens.png"
+import bannerkids from "./assets/bannerkids.png"
+import bannerwomens from "./assets/bannerwomens.png"
 
 export default function App() {
   return (
@@ -11,12 +15,12 @@ export default function App() {
       <BrowserRouter>
         <Header />
         <Routes>
-          <Route path="/" element={<Home />}/>
-          <Route path="/mens" element={<Category />}/>
-          <Route path="/womens" element={<Category />}/>
-          <Route path="/kids" element={<Category />}/>
-          <Route path="/product" element={<Product />}/>
-            <Route path=":productId" element={<Product />}/>
+          <Route path="/" element={<Home />} category/>
+          <Route path="/mens" element={<Category category="men" banner={bannermens}/>}/>
+          <Route path="/womens" element={<Category category="women" banner={bannerwomens}/>}/>
+          <Route path="/kids" element={<Category category="kid" banner={bannerkids}/>}/>
+          <Route path="/product/:productId" element={<Product />} />
+          
           <Route/>
         </Routes>
         <Footer />
