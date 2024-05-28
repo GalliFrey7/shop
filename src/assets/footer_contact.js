@@ -1,9 +1,9 @@
 
  const FOOTER_CONTACT_INFO = {
-  title: "Contact Us",
+  title: "Свяжитесь с нами",
   links: [
-    { label: "Contact Number", value: "123-456-7890" },
-    { label: "Email Address", value: "info@shoppee.com" },
+    { label: "Номер Телефона", value: "123-456-7890" },
+    { label: "Email Адрес", value: "info@shoppee.com" },
   ],
 };
 
